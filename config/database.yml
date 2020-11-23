@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: macron_production
-  username: macron
-  password: <%= ENV['MACRON_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
