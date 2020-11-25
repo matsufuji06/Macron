@@ -1,24 +1,15 @@
-# README
+## 概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## URL
 
-Things you may want to cover:
+## 機能一覧 
 
-* Ruby version
+## 技術一覧
+・Ruby  
+・Ruby on Rails  
+・haml  
+・scss  
+・Github  
+・AWS(EC2) 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## アプリへの想い
