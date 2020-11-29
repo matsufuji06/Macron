@@ -12,4 +12,11 @@
 ・Github  
 ・AWS(EC2) 
 
+## DB設計  
+### usersテーブル  
+### topsテーブル  
+### menusテーブル  
+### commentsテーブル
+### weightsテーブル  
+
 ## アプリへの想い
