@@ -1,0 +1,42 @@
+.header{
+  &__upper{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 1000px;
+    margin: 0 auto;
+    line-height: 100px;
+    &--logo{
+      color: #d0712f;
+      font-size: 36px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    &--navTop{
+      display: flex;
+      .user{
+        margin-right: 50px;
+        &__link{
+          text-decoration: none;
+          color: blue;
+        }
+      }
+      .logOut{
+        &__link{
+          text-decoration: none;
+          color: blue;
+          
+        }
+        
+      }
+      
+    }
+  }
+  &__bottom{
+    &--menu{
+      background-color: #d0712f;
+      height: 40px;
+      
+    }
+  }
+}

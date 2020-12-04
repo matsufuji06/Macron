@@ -1,0 +1,11 @@
+.header  
+  .header__upper
+    = link_to "Macron", root_path, class: "header__upper--logo"
+    .header__upper--navTop
+      .user
+        %span Hi,
+        = link_to "n,matsufuji06", "#", class: "user__link"
+      .logOut
+        = link_to "Log Out", "#", class: "logOut__link"
+  .header__bottom
+    .header__bottom--menu
