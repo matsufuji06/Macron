@@ -1,0 +1,26 @@
+.header{
+  &__upper{
+    display: flex;
+    &--logo{
+      color: #d0712f;
+      text-decoration: none;
+    }
+    &--navTop{
+      display: flex;
+      .user{
+        &__link{
+          text-decoration: none;
+          
+        }
+      }
+      .logOut{
+        &__link{
+          text-decoration: none;
+
+        }
+
+      }
+
+    }
+  }
+}
