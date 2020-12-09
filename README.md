@@ -21,6 +21,9 @@
 ●scss  
 ●Github  
 ●AWS(EC2) 
+●Unicorn  
+●Nginx  
+●Capistrano
 
 ## DB設計
 ### topsテーブル  
