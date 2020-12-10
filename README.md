@@ -28,6 +28,9 @@
 ## DB設計
 ### topsテーブル  
 ### usersテーブル  
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
 ### followテーブル
 ### postsテーブル  
 ### commentsテーブル  
