@@ -1,0 +1,20 @@
+.header  
+  .header__upper
+    = link_to "Macron", root_path, class: "header__upper--logo"
+    .header__upper--navTop
+      .user
+        %span Hi,
+        = link_to "n,matsufuji06", "#", class: "user__link"
+      .logIn
+        = link_to "Log In", "#", class: "logIn__link"
+        .logIn__separation
+        |
+        = link_to "簡単ログイン", "#", class: "logIn__linkSimple"
+      .logOut
+        = link_to "Log Out", "#", class: "logOut__link"
+  .header__bottom
+    .header__bottom--menu
+      .graph
+        = link_to "グラフ", "#", class: "graph__menu"
+      .postsIndex
+        = link_to "投稿一覧", "#", class: "postsIndex__menu"

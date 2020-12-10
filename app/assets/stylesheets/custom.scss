@@ -1,0 +1,83 @@
+.header{
+  &__upper{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 1000px;
+    margin: 0 auto;
+    line-height: 100px;
+    &--logo{
+      color: #d0712f;
+      font-size: 36px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    &--navTop{
+      display: flex;
+      .user{
+        margin-right: 50px;
+        &__link{
+          text-decoration: none;
+          color: blue;
+        }
+      }
+      .logIn{
+        margin-right: 50px;
+        display: flex;
+        &__link{
+          margin-right: 20px;
+          text-decoration: none;
+          color: blue;
+          
+        }
+        &__separation{
+
+        }
+        &__linkSimple{
+          margin-left: 20px;
+          text-decoration: none;
+          color: blue;
+          
+        }
+        
+      }
+      .logOut{
+        &__link{
+          text-decoration: none;
+          color: blue;
+          border: solid 1px;
+          border-radius: 10px;
+          padding: 10px;
+          
+        }
+        
+      }
+      
+    }
+  }
+  &__bottom{
+    &--menu{
+      display: flex;
+      background-color: #d0712f;
+      height: 40px;
+      line-height: 40px;
+      .graph{
+        margin-left: 220px;
+        &__menu{
+          color: #fff;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+      .postsIndex{
+        margin-left: 50px;
+        &__menu{
+          color: #fff;
+          font-weight: bold;
+          text-decoration: none;
+
+        }
+      }
+    }
+  }
+}
