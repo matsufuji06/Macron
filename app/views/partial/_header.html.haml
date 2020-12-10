@@ -7,12 +7,14 @@
         = link_to "n,matsufuji06", "#", class: "user__link"
       .logIn
         = link_to "Log In", "#", class: "logIn__link"
+        .logIn__separation
+        |
         = link_to "簡単ログイン", "#", class: "logIn__linkSimple"
       .logOut
         = link_to "Log Out", "#", class: "logOut__link"
   .header__bottom
     .header__bottom--menu
       .graph
-        .graph__menu グラフ
+        = link_to "グラフ", "#", class: "graph__menu"
       .postsIndex
-        .postsIndex__menu 投稿一覧
+        = link_to "投稿一覧", "#", class: "postsIndex__menu"
