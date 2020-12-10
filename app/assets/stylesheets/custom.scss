@@ -21,10 +21,33 @@
           color: blue;
         }
       }
+      .logIn{
+        margin-right: 50px;
+        display: flex;
+        &__link{
+          margin-right: 20px;
+          text-decoration: none;
+          color: blue;
+          
+        }
+        &__separation{
+
+        }
+        &__linkSimple{
+          margin-left: 20px;
+          text-decoration: none;
+          color: blue;
+          
+        }
+        
+      }
       .logOut{
         &__link{
           text-decoration: none;
           color: blue;
+          border: solid 1px;
+          border-radius: 10px;
+          padding: 10px;
           
         }
         
@@ -34,9 +57,27 @@
   }
   &__bottom{
     &--menu{
+      display: flex;
       background-color: #d0712f;
       height: 40px;
-      
+      line-height: 40px;
+      .graph{
+        margin-left: 220px;
+        &__menu{
+          color: #fff;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+      .postsIndex{
+        margin-left: 50px;
+        &__menu{
+          color: #fff;
+          font-weight: bold;
+          text-decoration: none;
+
+        }
+      }
     }
   }
 }
