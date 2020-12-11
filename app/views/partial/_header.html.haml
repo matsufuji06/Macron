@@ -11,7 +11,7 @@
         |
         = link_to "簡単ログイン", "#", class: "logIn__linkSimple"
       .logOut
-        = link_to "Log Out", "#", class: "logOut__link"
+        = link_to "Log Out", destroy_user_session_path, method: :delete, class: "logOut__link"
   .header__bottom
     .header__bottom--menu
       .graph
