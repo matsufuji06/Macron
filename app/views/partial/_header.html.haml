@@ -4,7 +4,7 @@
     .header__upper--navTop
       .user
         %span Hi,
-        = link_to "n,matsufuji06", "#", class: "user__link"
+        = link_to current_user.name, "#", class: "user__link"
       .logIn
         = link_to "Log In", "#", class: "logIn__link"
         .logIn__separation
