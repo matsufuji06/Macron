@@ -15,32 +15,39 @@
     &--navTop{
       display: flex;
       .user{
-        margin-right: 50px;
         &__link{
+          text-decoration: none;
+          color: blue;
+          margin-right: 20px;
+        }
+        &__edit{
+          margin-right: 20px;
           text-decoration: none;
           color: blue;
         }
       }
       .logIn{
-        margin-right: 50px;
-        display: flex;
-        &__link{
-          margin-right: 20px;
-          text-decoration: none;
-          color: blue;
-          
-        }
-        &__separation{
-
-        }
+        margin-right: 20px;
         &__linkSimple{
           margin-left: 20px;
           text-decoration: none;
           color: blue;
-          
         }
-        
       }
+      // .userEdit{
+      //   &__link{
+      //     margin-right: 20px;
+      //     text-decoration: none;
+      //     color: blue;
+      //   }
+      //   &__linkSimple{
+      //     margin-left: 20px;
+      //     text-decoration: none;
+      //     color: blue;
+          
+      //   }
+        
+      // }
       .logOut{
         &__link{
           text-decoration: none;
@@ -69,7 +76,7 @@
           text-decoration: none;
         }
       }
-      .postsIndex{
+      .postsIndex, .postsNew{
         margin-left: 50px;
         &__menu{
           color: #fff;

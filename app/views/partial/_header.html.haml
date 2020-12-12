@@ -4,17 +4,19 @@
     .header__upper--navTop
       .user
         %span Hi,
-        = link_to "n,matsufuji06", "#", class: "user__link"
+        = link_to current_user.name, "#", class: "user__link"
+        = link_to "ユーザー編集", edit_user_path(current_user), class: "user__edit"
+      .separation
+      |
       .logIn
-        = link_to "Log In", "#", class: "logIn__link"
-        .logIn__separation
-        |
         = link_to "簡単ログイン", "#", class: "logIn__linkSimple"
       .logOut
-        = link_to "Log Out", "#", class: "logOut__link"
+        = link_to "Log Out", destroy_user_session_path, method: :delete, class: "logOut__link"
   .header__bottom
     .header__bottom--menu
       .graph
         = link_to "グラフ", "#", class: "graph__menu"
+      .postsNew
+        = link_to "投稿する", "#", class: "postsNew__menu"
       .postsIndex
         = link_to "投稿一覧", "#", class: "postsIndex__menu"
