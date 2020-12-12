@@ -5,4 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   validates :name, presence: true, uniqueness: true
+
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com', name: "Taro") do |user|
+      user.password = SecureRandom.urlsafe_base64
+      # user.confirmed_at = Time.now
+    end
+  end
 end
