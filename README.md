@@ -33,6 +33,16 @@
 |name|string|null: false|
 ### followテーブル
 ### postsテーブル  
+|Column|Type|Options|
+|------|----|-------|
+|user_id|reference|null: false, foreign_key: true|
+|food|string|null: false|
+|calorie|decimal|null: false|
+|carbo|decimal|null: false|
+|fat|decimal|null: false|
+|protein|decimal|null: false|
+|weight|decimal|null: false|
+|date|date|null: false|
 ### commentsテーブル  
 ### likesテーブル
 ### standardsテーブル  
