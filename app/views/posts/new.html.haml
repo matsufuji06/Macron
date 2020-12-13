@@ -1,0 +1,4 @@
+.formGroup
+  = form_for @post, class: "formGroup__date" do |f|
+    = f.label :created_at, class: 'formGroup__date--label'
+    = f.date_field :created_at, class: 'formGroup__date--form'
