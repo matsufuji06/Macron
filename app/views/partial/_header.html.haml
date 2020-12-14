@@ -17,6 +17,6 @@
       .graph
         = link_to "グラフ", "#", class: "graph__menu"
       .postsNew
-        = link_to "投稿する", new_post_path, class: "postsNew__menu"
+        = link_to "投稿する", new_post_path, class: "postsNew__menu", data: {"turbolinks" => false}
       .postsIndex
         = link_to "投稿一覧", "#", class: "postsIndex__menu"
