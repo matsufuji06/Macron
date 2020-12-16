@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
   root  'top#index'
-  resources :posts, only: [:index, :new, :create]
+  resources :posts
   resources :users, only: [:edit, :update]
 end

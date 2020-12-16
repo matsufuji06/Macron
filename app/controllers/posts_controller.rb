@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    @posts = Post.all.includes(:user)
   end
 
   def new
@@ -13,6 +14,10 @@ class PostsController < ApplicationController
     else
       render action: :new
     end
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   private
