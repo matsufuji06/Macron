@@ -1,0 +1,9 @@
+=@post.food
+=@post.calorie
+=@post.carbo
+=@post.fat
+=@post.protein
+=@post.weight
+=@post.date
+- if user_signed_in? && current_user.id == @post.user_id
+  =link_to "削除する", post_path(@post.id), method: :delete
