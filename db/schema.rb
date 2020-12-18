@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20201212075356) do
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id",                   null: false
     t.string   "food",                      null: false
+    t.string   "image"
     t.decimal  "calorie",    precision: 10, null: false
     t.decimal  "carbo",      precision: 10, null: false
     t.decimal  "fat",        precision: 10, null: false

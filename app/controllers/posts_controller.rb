@@ -28,6 +28,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:food, :calorie, :carbo, :fat, :protein, :weight, :date).merge(user: current_user)
+    params.require(:post).permit(:food, :image, :calorie, :carbo, :fat, :protein, :weight, :date).merge(user: current_user)
   end
 end
