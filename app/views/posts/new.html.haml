@@ -7,6 +7,9 @@
       .formGroup__main--food
         = f.label :food, "食べたもの", class: 'label'
         = f.text_field :food, class: 'form'
+      .formGroup__main--image
+        = f.label :food, "食べたもの", class: 'label'
+        = f.file_field :image, class: 'form'
       .formGroup__main--carbo
         = f.label :carbo, "炭水化物", class: 'label'
         = f.number_field :carbo, step: "0.1", class: 'form'
