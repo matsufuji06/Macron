@@ -1,5 +1,7 @@
-今日の摂取カロリー：
-= Post.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+Your Daily Summary
+目標カロリーまであと
+= 2000 - Post.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+
 あなたが食べた食べ物：
 - @myposts.each do |mypost|
   = link_to post_path(mypost) do
