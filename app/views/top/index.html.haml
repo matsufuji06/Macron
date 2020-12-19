@@ -1,7 +1,7 @@
 Your Daily Summary
 目標カロリーまであと
-= 2000 - Post.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-= bar_chart Post.group(:calorie).sum(:calorie), width: "400px", height: "200px"
+= 2000 - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+= bar_chart Post.group(:calorie).where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie), stacked: false, width: "400px", height: "200px"
 
 あなたが食べた食べ物：
 - @myposts.each do |mypost|

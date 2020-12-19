@@ -39,10 +39,10 @@
       %table
         %tr
           %td 今日の合計
-          %td= Post.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-          %td= Post.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:carbo)
-          %td= Post.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:fat)
-          %td= Post.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
+          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:carbo)
+          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:fat)
+          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
         %tr
           %td 目標
           %td 1700
