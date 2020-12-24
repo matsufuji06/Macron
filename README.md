@@ -20,13 +20,15 @@
 - Ruby on Rails 5.0.7.2  
 - haml  
 - scss  
-- devise  
-- Carrierwave  
+- Gem(devise)  
+- Gem(Carrierwave)  
 - Github  
 - AWS(EC2) 
 - Unicorn  
 - Nginx  
 - Capistrano
+- Gem(Chartkick) 
+- Gem(Groupdate)
 
 ## DB設計
 ### topsテーブル  
