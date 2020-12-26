@@ -6,7 +6,7 @@
     .formGroup__macroList
       %table
         %tr
-          %th 今日の合計
+          %th 食べたもの
           %th カロリー(kcal)
           %th 炭水化物(g)
           %th 脂質(g)
@@ -18,15 +18,16 @@
       .formGroup__main--image
         = f.label :food, "画像を投稿", class: 'label'
         = f.file_field :image, class: 'form'
-      .formGroup__main--carbo
-        = f.label :carbo, "炭水化物", class: 'label'
-        = f.number_field :carbo, step: "0.1", class: 'form'
-      .formGroup__main--fat
-        = f.label :fat, "脂質", class: 'label'
-        = f.number_field :fat, step: "0.1", class: 'form'
-      .formGroup__main--protein
-        = f.label :protein, "タンパク質", class: 'label'
-        = f.number_field :protein, step: "0.1", class: 'form'
+      .formGroup__main--macro
+        .carbo
+          = f.label :carbo, "炭水化物", class: 'label'
+          = f.number_field :carbo, step: "0.1", class: 'form'
+        .fat
+          = f.label :fat, "脂質", class: 'label'
+          = f.number_field :fat, step: "0.1", class: 'form'
+        .protein
+          = f.label :protein, "タンパク質", class: 'label'
+          = f.number_field :protein, step: "0.1", class: 'form'
       .formGroup__main--calorie
         = f.label :calorie, "カロリー", class: 'label'
         = f.number_field :calorie, step: "0.1", class: 'form'

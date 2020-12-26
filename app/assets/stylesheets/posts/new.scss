@@ -1,43 +1,84 @@
 .formGroup{
   margin: 50px 150px;
   &__date{
+    border-bottom: 1px dotted;
+    padding: 0px 0px 10px 0px;
     &--label{
-
+      
     }
     &--form{
-
+      
     }
   }
   &__macroList{
-
+    border-bottom: 1px dotted;
+    padding: 0px 0px 10px 0px;
+    table{
+      text-align: center;
+      tr{
+        th{
+          background-color: #d0712f;
+          color: #fff;
+          padding: 5px;
+        }
+        td{
+          background-color: #eee;
+          
+        }
+      }
+    }
+    
   }
   &__main{
+    padding: 10px 0px 10px 0px;
     &--food{
-
+      
     }
     &--image{
-
+      
     }
-    &--carbo{
-
-    }
-    &--fat{
-
-    }
-    &--protein{
-
+    &--macro{
+      display: flex;
+      
+      .carbo{
+        margin: 0px 20px 0px 0px;
+      }
+      .fat{
+        margin: 0px 20px 0px 0px;
+        
+      }
+      .protein{
+        margin: 0px 20px 0px 0px;
+        
+      }
     }
     &--calorie{
-
+      
     }
     &--weight{
-
+      
     }
   }
   &__submit{
-
+    border-bottom: 1px dotted;
+    padding: 0px 0px 10px 0px;
+    
   }
   &__macroTotal{
-    
+    padding: 10px 0px 0px 0px;
+    table{
+      text-align: center;
+      tr{
+        td{
+          background-color: #eee;
+
+        }
+        th{
+          background-color: #d0712f;
+          color: #fff;
+          padding: 5px;
+        }
+      }
+    }
   }
 }
