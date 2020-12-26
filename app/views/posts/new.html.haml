@@ -10,7 +10,14 @@
           %th カロリー(kcal)
           %th 炭水化物(g)
           %th 脂質(g)
-          %th タンパク質(g)
+          %th タンパク質(g) 
+        - @posts.each do |post|
+          %tr
+            %td= post.food
+            %td= post.calorie
+            %td= post.carbo
+            %td= post.fat
+            %td= post.protein
     .formGroup__main
       .formGroup__main--food
         = f.label :food, "食べたもの", class: 'label'
