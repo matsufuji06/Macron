@@ -5,6 +5,8 @@ class PostsController < ApplicationController
   
   def new
     @posts = Post.all.includes(:user)
+    posts = @posts
+    @myposts = current_user.posts
     @post = Post.new
   end
 
