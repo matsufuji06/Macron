@@ -3,19 +3,38 @@
     .formGroup__date
       = f.label :date, "日付", class: 'formGroup__date--label'
       = f.date_select :date, class: 'formGroup__date--form'
+    .formGroup__macroList
+      %table
+        %tr
+          %th 食べたもの
+          %th カロリー(kcal)
+          %th 炭水化物(g)
+          %th 脂質(g)
+          %th タンパク質(g) 
+        - @myposts.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).each do |mypost|
+          %tr
+            %td= mypost.food
+            %td= mypost.calorie
+            %td= mypost.carbo
+            %td= mypost.fat
+            %td= mypost.protein
     .formGroup__main
       .formGroup__main--food
         = f.label :food, "食べたもの", class: 'label'
         = f.text_field :food, class: 'form'
-      .formGroup__main--carbo
-        = f.label :carbo, "炭水化物", class: 'label'
-        = f.number_field :carbo, step: "0.1", class: 'form'
-      .formGroup__main--fat
-        = f.label :fat, "脂質", class: 'label'
-        = f.number_field :fat, step: "0.1", class: 'form'
-      .formGroup__main--protein
-        = f.label :protein, "タンパク質", class: 'label'
-        = f.number_field :protein, step: "0.1", class: 'form'
+      .formGroup__main--image
+        = f.label :food, "画像を投稿", class: 'label'
+        = f.file_field :image, class: 'form'
+      .formGroup__main--macro
+        .carbo
+          = f.label :carbo, "炭水化物", class: 'label'
+          = f.number_field :carbo, step: "0.1", class: 'form'
+        .fat
+          = f.label :fat, "脂質", class: 'label'
+          = f.number_field :fat, step: "0.1", class: 'form'
+        .protein
+          = f.label :protein, "タンパク質", class: 'label'
+          = f.number_field :protein, step: "0.1", class: 'form'
       .formGroup__main--calorie
         = f.label :calorie, "カロリー", class: 'label'
         = f.number_field :calorie, step: "0.1", class: 'form'
@@ -24,5 +43,29 @@
         = f.number_field :weight, step: "0.1", class: 'form'
     .formGroup__submit
       = f.submit "投稿する", class: "submitBtn"
-今日の摂取カロリー：
-= Post.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+    .formGroup__macroTotal
+      %table
+        %tr
+          %td 今日の合計
+          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:carbo)
+          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:fat)
+          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
+        %tr
+          %td 目標
+          %td 1700
+          %td 100
+          %td 100
+          %td 100
+        %tr
+          %td 残り...
+          %td 0
+          %td 0
+          %td 0
+          %td 0
+        %tr
+          %th 
+          %th カロリー(kcal)
+          %th 炭水化物(g)
+          %th 脂質(g)
+          %th タンパク質(g)

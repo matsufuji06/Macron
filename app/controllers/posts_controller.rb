@@ -2,8 +2,11 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.includes(:user)
   end
-
+  
   def new
+    @posts = Post.all.includes(:user)
+    posts = @posts
+    @myposts = current_user.posts
     @post = Post.new
   end
 
@@ -28,6 +31,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:food, :calorie, :carbo, :fat, :protein, :weight, :date).merge(user: current_user)
+    params.require(:post).permit(:food, :image, :calorie, :carbo, :fat, :protein, :weight, :date).merge(user: current_user)
   end
 end

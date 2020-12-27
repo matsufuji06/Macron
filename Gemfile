@@ -61,8 +61,14 @@ group :production do
   gem 'unicorn', '5.4.1'
 end
 
+# 新たに下記のgemをインストール
 gem 'devise'
 gem 'haml-rails'
-
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+gem 'carrierwave'
+gem 'mini_magick'
+gem "chartkick"
+gem 'groupdate'
+gem 'bootstrap', '~> 4.5.0'
+gem 'jquery-rails'
