@@ -1,18 +1,31 @@
-= form_for @standard do |f|
+.formStandard
+  = form_for @standard do |f|
+    .formStandard__left
+      .formStandard__left--weight
+        = f.label :weight, "現在体重", class: 'label'
+        = f.number_field :weight, step: "0.1", class: 'standardForm'
+      
+      .formStandard__left--idealWeight
+        = f.label :idealweight, "理想体重", class: 'label'
+        = f.number_field :idealweight, step: "0.1", class: 'standardForm'
 
-  = f.label :carbo, "炭水化物", class: 'label'
-  = f.number_field :carbo, step: "0.1", class: 'form'
+    .formStandard__right
+      .formStandard__right--carbo
+        = f.label :carbo, "炭水化物", class: 'label'
+        = f.number_field :carbo, step: "0.1", class: 'standardForm'
+      
+      .formStandard__right--fat
+        = f.label :fat, "脂質", class: 'label'
+        = f.number_field :fat, step: "0.1", class: 'standardForm'
 
-  = f.label :fat, "脂質", class: 'label'
-  = f.number_field :fat, step: "0.1", class: 'form'
+      .formStandard__right--protein
+        = f.label :protein, "タンパク質", class: 'label'
+        = f.number_field :protein, step: "0.1", class: 'standardForm'
 
-  = f.label :protein, "タンパク質", class: 'label'
-  = f.number_field :protein, step: "0.1", class: 'form'
+      .formStandard__right--calorie
+        = f.label :calorie, "カロリー", class: 'label'
+        = f.number_field :calorie, step: "0.1", class: 'standardForm'
 
-  = f.label :calorie, "カロリー", class: 'label'
-  = f.number_field :calorie, step: "0.1", class: 'form'
-
-  = f.label :weight, "現在体重", class: 'label'
-  = f.number_field :weight, step: "0.1", class: 'form'
-
-  = f.submit "投稿する", class: "submitBtn"
+    .formStandard__bottom
+      .formStandard__bottom--submit
+        = f.submit "完了", class: "submitBtn"
