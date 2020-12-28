@@ -1,1 +1,18 @@
-hello
+= form_for @standard do |f|
+
+  = f.label :carbo, "炭水化物", class: 'label'
+  = f.number_field :carbo, step: "0.1", class: 'form'
+
+  = f.label :fat, "脂質", class: 'label'
+  = f.number_field :fat, step: "0.1", class: 'form'
+
+  = f.label :protein, "タンパク質", class: 'label'
+  = f.number_field :protein, step: "0.1", class: 'form'
+
+  = f.label :calorie, "カロリー", class: 'label'
+  = f.number_field :calorie, step: "0.1", class: 'form'
+
+  = f.label :weight, "現在体重", class: 'label'
+  = f.number_field :weight, step: "0.1", class: 'form'
+
+  = f.submit "投稿する", class: "submitBtn"
