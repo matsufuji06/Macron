@@ -51,6 +51,14 @@
 |date|date|null: false|
 ### commentsテーブル  
 ### likesテーブル
-### standardsテーブル  
+### standardsテーブル 
+|Column|Type|Options|
+|------|----|-------|
+|user_id|reference|null: false, foreign_key: true|
+|calorie|decimal|null: false|
+|carbo|decimal|null: false|
+|fat|decimal|null: false|
+|protein|decimal|null: false|
+|weight|decimal|null: false|
 
 ## アプリへの想い
