@@ -1,0 +1,56 @@
+.formStandard{
+  &__left{
+    &--weight{
+
+    }
+    &--idealweight{
+
+    }
+  }
+
+  &__right{
+    &--macro{
+      .carboStandard{
+        .label{
+
+        }
+        .standardForm{
+
+        }
+      }
+      .fatStandard{
+        .label{
+
+        }
+        .standardForm{
+          
+        }
+      }
+      .proteinStandard{
+        .label{
+
+        }
+        .standardForm{
+          
+        }
+      }
+
+    }
+    &--calorie{
+      .label{
+
+      }
+      .standardForm{
+        
+      }
+    }
+  }
+
+  &__bottom{
+    &--submit{
+      .submitBtn{
+        
+      }
+    }
+  }
+}

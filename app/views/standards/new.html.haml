@@ -10,17 +10,18 @@
         = f.number_field :idealweight, step: "0.1", class: 'standardForm'
 
     .formStandard__right
-      .formStandard__right--carbo
-        = f.label :carbo, "炭水化物", class: 'label'
-        = f.number_field :carbo, step: "0.1", class: 'standardForm'
-      
-      .formStandard__right--fat
-        = f.label :fat, "脂質", class: 'label'
-        = f.number_field :fat, step: "0.1", class: 'standardForm'
+      .formStandard__right--macro
+        .carboStandard
+          = f.label :carbo, "炭水化物", class: 'label'
+          = f.number_field :carbo, step: "0.1", class: 'standardForm'
+        
+        .fatStandard
+          = f.label :fat, "脂質", class: 'label'
+          = f.number_field :fat, step: "0.1", class: 'standardForm'
 
-      .formStandard__right--protein
-        = f.label :protein, "タンパク質", class: 'label'
-        = f.number_field :protein, step: "0.1", class: 'standardForm'
+        .proteinStandard
+          = f.label :protein, "タンパク質", class: 'label'
+          = f.number_field :protein, step: "0.1", class: 'standardForm'
 
       .formStandard__right--calorie
         = f.label :calorie, "カロリー", class: 'label'
