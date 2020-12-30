@@ -9,9 +9,8 @@ class CreateStandards < ActiveRecord::Migration[5.0]
       t.decimal    :weight,           null: false
       t.decimal    :idealweight,      null: false
       t.decimal    :metabolism,       null: false
-      t.integer    :workinglevel,     null: false, default: 0
-      t.integer    :age,              null: false, default: 0
-      t.integer    :sex,              null: false, default: 0
+      t.integer    :age,              null: false
+      t.integer    :sex,              null: false
       t.timestamps
     end
   end

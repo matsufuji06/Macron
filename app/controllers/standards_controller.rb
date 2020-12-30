@@ -14,6 +14,6 @@ class StandardsController < ApplicationController
 
   private
   def standard_params
-    params.require(:standard).permit(:calorie, :carbo, :fat, :protein, :weight, :idealweight).merge(user: current_user)
+    params.require(:standard).permit(:calorie, :carbo, :fat, :protein, :weight, :idealweight, :metabolism, :age, :sex).merge(user: current_user)
   end
 end
