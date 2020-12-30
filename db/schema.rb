@@ -37,8 +37,9 @@ ActiveRecord::Schema.define(version: 20201227104157) do
     t.decimal  "idealweight",     precision: 10,             null: false
     t.decimal  "metabolism",      precision: 10,             null: false
     t.decimal  "basalmetabolism", precision: 10,             null: false
-    t.integer  "age",                            default: 0, null: false
     t.integer  "workinglevel",                   default: 0, null: false
+    t.integer  "age",                            default: 0, null: false
+    t.integer  "sex",                            default: 0, null: false
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
     t.index ["user_id"], name: "index_standards_on_user_id", using: :btree
