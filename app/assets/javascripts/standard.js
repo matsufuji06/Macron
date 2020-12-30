@@ -1,10 +1,14 @@
 window.addEventListener("load", function() {
-  const weightStandard = document.getElementsByClassName("standardForm")[0];
-  const idealweightStandard = document.getElementsByClassName("standardForm")[1];
-  const carboStandard = document.getElementsByClassName("standardForm")[2];
-  const fatStandard = document.getElementsByClassName("standardForm")[3];
-  const proteinStandard = document.getElementsByClassName("standardForm")[4];
-  const calorieStandard = document.getElementsByClassName("standardForm")[5];
+  const maleStandard = document.getElementsByClassName("standardForm")[0];
+  const femaleStandard = document.getElementsByClassName("standardForm")[1];
+  const ageStandard = document.getElementsByClassName("standardForm")[2];
+  const metabolismStandard = document.getElementsByClassName("standardForm")[3];
+  const weightStandard = document.getElementsByClassName("standardForm")[4];
+  const idealweightStandard = document.getElementsByClassName("standardForm")[5];
+  const carboStandard = document.getElementsByClassName("standardForm")[6];
+  const fatStandard = document.getElementsByClassName("standardForm")[7];
+  const proteinStandard = document.getElementsByClassName("standardForm")[8];
+  const calorieStandard = document.getElementsByClassName("standardForm")[9];
 
   const calculateStandard = () => {
     const gap = weightStandard.value - idealweightStandard.value
