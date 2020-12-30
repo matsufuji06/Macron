@@ -28,20 +28,19 @@ ActiveRecord::Schema.define(version: 20201227104157) do
   end
 
   create_table "standards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id",                                    null: false
-    t.decimal  "calorie",         precision: 10,             null: false
-    t.decimal  "carbo",           precision: 10,             null: false
-    t.decimal  "fat",             precision: 10,             null: false
-    t.decimal  "protein",         precision: 10,             null: false
-    t.decimal  "weight",          precision: 10,             null: false
-    t.decimal  "idealweight",     precision: 10,             null: false
-    t.decimal  "metabolism",      precision: 10,             null: false
-    t.decimal  "basalmetabolism", precision: 10,             null: false
-    t.integer  "workinglevel",                   default: 0, null: false
-    t.integer  "age",                            default: 0, null: false
-    t.integer  "sex",                            default: 0, null: false
-    t.datetime "created_at",                                 null: false
-    t.datetime "updated_at",                                 null: false
+    t.integer  "user_id",                                 null: false
+    t.decimal  "calorie",      precision: 10,             null: false
+    t.decimal  "carbo",        precision: 10,             null: false
+    t.decimal  "fat",          precision: 10,             null: false
+    t.decimal  "protein",      precision: 10,             null: false
+    t.decimal  "weight",       precision: 10,             null: false
+    t.decimal  "idealweight",  precision: 10,             null: false
+    t.decimal  "metabolism",   precision: 10,             null: false
+    t.integer  "workinglevel",                default: 0, null: false
+    t.integer  "age",                         default: 0, null: false
+    t.integer  "sex",                         default: 0, null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.index ["user_id"], name: "index_standards_on_user_id", using: :btree
   end
 
