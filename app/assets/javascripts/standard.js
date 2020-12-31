@@ -10,6 +10,28 @@ window.addEventListener("load", function() {
   const proteinStandard = document.getElementsByClassName("standardForm")[8];
   const calorieStandard = document.getElementsByClassName("standardForm")[9];
 
+  const calculateMetabolism = () => {
+    const sexSelect = () => {
+      if (maleStandard.checked) {
+        
+      } else if (femaleStandard.checked) {
+        console.log("hello, female");
+        
+      };
+    };
+    const ageSelect = () => {
+      console.log("hello");
+    };
+    sexSelect();
+    ageSelect();
+  };
+
+  maleStandard.addEventListener("click", calculateMetabolism);
+  femaleStandard.addEventListener("click", calculateMetabolism);
+  ageStandard.onchange = event => {
+    calculateMetabolism();
+  }
+
   const calculateStandard = () => {
     const gap = weightStandard.value - idealweightStandard.value
     

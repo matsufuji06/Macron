@@ -8,7 +8,7 @@
         = f.radio_button :sex, :female, class: "standardForm"
         = f.label :sex, "女性", value: :female, class: 'label'
       .formStandard__upper--age
-        = f.select :age, [["15~17歳", 0], ["18~29歳", 1], ["30~49歳", 2], ["50~69歳", 3], ["70歳~", 4]], class: 'standardForm'
+        = f.select :age, [["選択してください", ""], ["15~17歳", 0], ["18~29歳", 1], ["30~49歳", 2], ["50~69歳", 3], ["70歳~", 4]], class: 'standardForm'
       .formStandard__upper--metabolism
         = f.label :metabolism, "消費カロリー", class: 'label'
         = f.number_field :metabolism, step: "0.1", class: 'standardForm'
