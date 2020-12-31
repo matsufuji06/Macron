@@ -1,10 +1,41 @@
 .formStandard{
-  &__left{
-    &--weight{
+  &__upper{
+    &--sex{
 
     }
-    &--idealweight{
+    &--age{
+      .label{
+  
+      }
+      .standardForm{
+  
+      }
+    }
+    &__metabolism{
+      .label{
 
+      }
+      .standardForm{
+
+      }
+    }
+  }
+  &__left{
+    &--weight{
+      .label{
+
+      }
+      .standardForm{
+
+      }
+    }
+    &--idealWeight{
+      .label{
+
+      }
+      .standardForm{
+
+      }
     }
   }
 
