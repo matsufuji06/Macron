@@ -3,7 +3,10 @@ Your Daily Summary
 = 2000 - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
 = bar_chart Post.group_by_day(:date).where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie), width: "400px", height: "200px", stacked: true
 
-今日の食べ物：
+%div 今日の食べ物：
 - @myposts.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).each do |mypost|
   = link_to post_path(mypost) do
     = mypost.food
+
+%div 体重の推移
+= line_chart Post.group_by_day(:date).maximum(:weight), min: 30, max: 120, width: "400px", height: "200px"
