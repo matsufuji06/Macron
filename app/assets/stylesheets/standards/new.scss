@@ -1,85 +1,107 @@
 .formStandard{
   &__upper{
-    &--sex{
-
-    }
-    &--age{
-      .label{
-  
-      }
-      .standardForm{
-  
-      }
-    }
-    &__metabolism{
-      .label{
-
-      }
-      .standardForm{
-
-      }
-    }
-  }
-  &__left{
-    &--weight{
-      .label{
-
-      }
-      .standardForm{
-
-      }
-    }
-    &--idealWeight{
-      .label{
-
-      }
-      .standardForm{
-
-      }
-    }
-  }
-
-  &__right{
-    &--macro{
-      .carboStandard{
-        .label{
-
-        }
+    display: flex;
+    &--userInfo{
+      background-color: red;
+      width: 50%;
+      .sexStandard{
         .standardForm{
-
+          
+        }
+        .label{
+          
         }
       }
-      .fatStandard{
+      .ageStandard{
         .label{
-
+          
         }
         .standardForm{
           
         }
       }
-      .proteinStandard{
-        .label{
-
-        }
-        .standardForm{
-          
-        }
-      }
-
     }
-    &--calorie{
+    &--metabolism{
+      width: 50%;
+      background-color: yellowgreen;
       .label{
-
+        
       }
       .standardForm{
         
       }
     }
   }
+  &__main{
+    display: flex;
+    &--left{
+      background-color: blue;
+      width: 50%;
+      .weightStandard{
+        .label{
+          
+        }
+        .standardForm{
+          
+        }
+      }
+      .idealWeightStandard{
+        .label{
+          
+        }
+        .standardForm{
+          
+        }
+      }
+    }
+    
+    &--right{
+      width: 50%;
+      background-color: yellow;
+      .macroStandard{
+        .carboStandard{
+          .label{
+  
+          }
+          .standardForm{
+  
+          }
+        }
+        .fatStandard{
+          .label{
+  
+          }
+          .standardForm{
+            
+          }
+        }
+        .proteinStandard{
+          .label{
+  
+          }
+          .standardForm{
+            
+          }
+        }
+  
+      }
+      .calorieStandard{
+        .label{
+  
+        }
+        .standardForm{
+          
+        }
+      }
+    }
+  }
 
   &__bottom{
+    background-color: green;
     &--submit{
+      text-align: center;
       .submitBtn{
+        display: inline-block;
         
       }
     }

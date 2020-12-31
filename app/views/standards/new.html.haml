@@ -1,44 +1,45 @@
 .formStandard
   = form_for @standard do |f|
     .formStandard__upper
-      .formStandard__upper--sex
-        = f.radio_button :sex, :male, class: "standardForm"
-        = f.label :sex, "男性", value: :male, class: 'label'
-        = f.radio_button :sex, :female, class: "standardForm"
-        = f.label :sex, "女性", value: :female, class: 'label'
-      .formStandard__upper--age
-        = f.label :age, "年齢", class: 'label'
-        = f.select :age, [["選択してください", ""], ["15~17歳", 0], ["18~29歳", 1], ["30~49歳", 2], ["50~69歳", 3], ["70歳~", 4]], class: 'standardForm'
+      .formStandard__upper--userInfo
+        .sexStandard
+          = f.radio_button :sex, :male, class: "standardForm"
+          = f.label :sex, "男性", value: :male, class: 'label'
+          = f.radio_button :sex, :female, class: "standardForm"
+          = f.label :sex, "女性", value: :female, class: 'label'
+        .ageStandard
+          = f.label :age, "年齢", class: 'label'
+          = f.select :age, [["選択してください", ""], ["15~17歳", 0], ["18~29歳", 1], ["30~49歳", 2], ["50~69歳", 3], ["70歳~", 4]], class: 'standardForm'
       .formStandard__upper--metabolism
         = f.label :metabolism, "消費カロリー", class: 'label'
         = f.number_field :metabolism, step: "0.1", class: 'standardForm'
-
-    .formStandard__left
-      .formStandard__left--weight
-        = f.label :weight, "現在体重", class: 'label'
-        = f.number_field :weight, step: "0.1", class: 'standardForm'
-      
-      .formStandard__left--idealWeight
-        = f.label :idealweight, "理想体重", class: 'label'
-        = f.number_field :idealweight, step: "0.1", class: 'standardForm'
-
-    .formStandard__right
-      .formStandard__right--macro
-        .carboStandard
-          = f.label :carbo, "炭水化物", class: 'label'
-          = f.number_field :carbo, step: "0.1", class: 'standardForm'
+    .formStandard__main
+      .formStandard__main--left
+        .weightStandard
+          = f.label :weight, "現在体重", class: 'label'
+          = f.number_field :weight, step: "0.1", class: 'standardForm'
         
-        .fatStandard
-          = f.label :fat, "脂質", class: 'label'
-          = f.number_field :fat, step: "0.1", class: 'standardForm'
+        .idealWeightStandard
+          = f.label :idealweight, "理想体重", class: 'label'
+          = f.number_field :idealweight, step: "0.1", class: 'standardForm'
 
-        .proteinStandard
-          = f.label :protein, "タンパク質", class: 'label'
-          = f.number_field :protein, step: "0.1", class: 'standardForm'
+      .formStandard__main--right
+        .macroStandard
+          .carboStandard
+            = f.label :carbo, "炭水化物", class: 'label'
+            = f.number_field :carbo, step: "0.1", class: 'standardForm'
+          
+          .fatStandard
+            = f.label :fat, "脂質", class: 'label'
+            = f.number_field :fat, step: "0.1", class: 'standardForm'
 
-      .formStandard__right--calorie
-        = f.label :calorie, "カロリー", class: 'label'
-        = f.number_field :calorie, step: "0.1", class: 'standardForm'
+          .proteinStandard
+            = f.label :protein, "タンパク質", class: 'label'
+            = f.number_field :protein, step: "0.1", class: 'standardForm'
+
+        .calorieStandard
+          = f.label :calorie, "カロリー", class: 'label'
+          = f.number_field :calorie, step: "0.1", class: 'standardForm'
 
     .formStandard__bottom
       .formStandard__bottom--submit
