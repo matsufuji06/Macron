@@ -27,19 +27,19 @@
         .macroStandard
           .carboStandard
             = f.label :carbo, "炭水化物", class: 'label'
-            = f.number_field :carbo, step: "0.1", class: 'standardForm'
+            = f.number_field :carbo, step: "0.1", class: 'standardForm', id: "carboStandard"
           
           .fatStandard
             = f.label :fat, "脂質", class: 'label'
-            = f.number_field :fat, step: "0.1", class: 'standardForm'
+            = f.number_field :fat, step: "0.1", class: 'standardForm', id: "fatStandard"
 
           .proteinStandard
             = f.label :protein, "タンパク質", class: 'label'
-            = f.number_field :protein, step: "0.1", class: 'standardForm'
+            = f.number_field :protein, step: "0.1", class: 'standardForm', id: "proteinStandard"
 
         .calorieStandard
           = f.label :calorie, "カロリー", class: 'label'
-          = f.number_field :calorie, step: "0.1", class: 'standardForm'
+          = f.number_field :calorie, step: "0.1", class: 'standardForm', id: "calorieStandard"
 
     .formStandard__bottom
       .formStandard__bottom--submit
