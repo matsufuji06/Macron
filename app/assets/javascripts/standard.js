@@ -56,9 +56,15 @@ window.addEventListener("load", function() {
     calorie.value = sum;
   };
 
+  const calculateIdealCalorie = () => {
+    
+  };
+
   carbo.addEventListener("input", calculateCalorie);
   fat.addEventListener("input", calculateCalorie);
   protein.addEventListener("input", calculateCalorie);
   male.addEventListener("click", calculateMetabolism);
   female.addEventListener("click", calculateMetabolism);
+  weight.addEventListener("input", calculateIdealCalorie);
+  idealWeight.addEventListener("input", calculateIdealCalorie);
 });
