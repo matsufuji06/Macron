@@ -11,26 +11,19 @@ window.addEventListener("load", function() {
   const calorieStandard = document.getElementsByClassName("standardForm")[9];
 
   const calculateMetabolism = () => {
-    const sexSelect = () => {
-      if (maleStandard.checked) {
-        
-      } else if (femaleStandard.checked) {
-        console.log("hello, female");
-        
-      };
+    const ageNum = ageStandard.selectedIndex;
+    const ageValue = ageStandard[ageNum].values;
+    if (maleStandard.checked) {
+      if (ageValue === 0) {
+        console.log("Hello");
+      }
+    } else if (femaleStandard.checked) {
+      console.log("hello, female");
     };
-    const ageSelect = () => {
-      console.log("hello");
-    };
-    sexSelect();
-    ageSelect();
   };
 
   maleStandard.addEventListener("click", calculateMetabolism);
   femaleStandard.addEventListener("click", calculateMetabolism);
-  ageStandard.onchange = event => {
-    calculateMetabolism();
-  }
 
   const calculateStandard = () => {
     const gap = weightStandard.value - idealweightStandard.value
