@@ -15,7 +15,7 @@
   .header__bottom
     .header__bottom--menu
       .standard
-        = link_to "目標設定", new_standard_path, class: "standard__menu"
+        = link_to "目標設定", new_standard_path, class: "standard__menu", data: {"turbolinks" => false}
       .postsNew
         = link_to "投稿する", new_post_path, class: "postsNew__menu", data: {"turbolinks" => false}
       .postsIndex
