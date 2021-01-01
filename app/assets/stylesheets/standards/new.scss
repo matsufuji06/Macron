@@ -2,7 +2,7 @@
   &__upper{
     display: flex;
     &--userInfo{
-      background-color: red;
+      background-color: #aaa;
       width: 50%;
       .sexStandard{
         .standardForm{
@@ -23,7 +23,7 @@
     }
     &--metabolism{
       width: 50%;
-      background-color: yellowgreen;
+      background-color: #bbb;
       .label{
         
       }
@@ -35,7 +35,7 @@
   &__main{
     display: flex;
     &--left{
-      background-color: blue;
+      background-color: #ccc;
       width: 50%;
       .weightStandard{
         .label{
@@ -57,8 +57,9 @@
     
     &--right{
       width: 50%;
-      background-color: yellow;
+      background-color: #ddd;
       .macroStandard{
+        display: flex;
         .carboStandard{
           .label{
   
@@ -97,7 +98,7 @@
   }
 
   &__bottom{
-    background-color: green;
+    background-color: #eee;
     &--submit{
       text-align: center;
       .submitBtn{
