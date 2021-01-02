@@ -21,10 +21,8 @@ window.addEventListener("load", function() {
           metabolism.value = 2660;
         } else if (val === "2") {
           metabolism.value = 2678;
-          
         } else if (val === "3") {
           metabolism.value = 2450;
-          
         } else if (val === "4") {
           metabolism.value = 2193;
         };
@@ -41,36 +39,39 @@ window.addEventListener("load", function() {
           metabolism.value = 1943;
         } else if (val === "2") {
           metabolism.value = 2013;
-          
         } else if (val === "3") {
           metabolism.value = 1942;
-          
         } else if (val === "4") {
           metabolism.value = 1734;
         };
       };
     };
   };
-  const calculateCalorie = () => {
+  
+  const calculateIdealCalorie = () => {
     const sum = carbo.value*4 + fat.value*9 + protein.value*4;
     calorie.value = sum;
-  };
-
-  const calculateIdealCalorie = () => {
-    const gap = idealWeight.value - weight.value
+    const gap = idealWeight.value - weight.value;
+    const metabolism = document.getElementById("metabolismStandard");
     console.log(gap);
     if (gap >= 0) {
       console.log("ぷらす");
+      const totalWeightGain = metabolism.value + gap.value;
+      console.log(totalWeightGain);
+      console.log(metabolism.value);
     } else {
       console.log("まいなす");
+      const totalWeightLose = metabolism.value + Math.abs(gap).value;
+      console.log(totalWeightLose);
+      console.log(metabolism.value);
     };
   };
 
-  carbo.addEventListener("input", calculateCalorie);
-  fat.addEventListener("input", calculateCalorie);
-  protein.addEventListener("input", calculateCalorie);
   male.addEventListener("click", calculateMetabolism);
   female.addEventListener("click", calculateMetabolism);
+  carbo.addEventListener("input", calculateIdealCalorie);
+  fat.addEventListener("input", calculateIdealCalorie);
+  protein.addEventListener("input", calculateIdealCalorie);
   weight.addEventListener("input", calculateIdealCalorie);
   idealWeight.addEventListener("input", calculateIdealCalorie);
 });
