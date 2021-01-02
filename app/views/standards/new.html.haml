@@ -2,6 +2,8 @@
   = form_for @standard do |f|
     .formStandard__upper
       .formStandard__upper--userInfo
+        .userInfoText
+          %p ①性別と年代を入力してください
         .sexStandard
           = f.radio_button :sex, :male, class: "standardForm", id: "maleStandard"
           = f.label :sex, "男性", value: :male, class: 'label'
@@ -11,10 +13,14 @@
           = f.label :age, "年齢", class: 'label'
           = f.select :age, [["選択してください", ""], ["15~17歳", 0], ["18~29歳", 1], ["30~49歳", 2], ["50~69歳", 3], ["70歳~", 4]], class: 'standardForm', id: "ageStandard"
       .formStandard__upper--metabolism
+        .metabolismText
+          %p ②標準消費カロリーを確認してください
         = f.label :metabolism, "消費カロリー", class: 'label'
         = f.number_field :metabolism, step: "0.1", class: 'standardForm', id: "metabolismStandard"
     .formStandard__main
       .formStandard__main--left
+        .weightText
+          %p ③現在の体重と目指す体重を入力してください</br>（増やしてもOK）
         .weightStandard
           = f.label :weight, "現在体重", class: 'label'
           = f.number_field :weight, step: "0.1", class: 'standardForm', id: "weightStandard"
@@ -24,6 +30,8 @@
           = f.number_field :idealweight, step: "0.1", class: 'standardForm', id: "idealWeightStandard"
 
       .formStandard__main--right
+        .macroText
+          %p ④目標体重に向けてのマクロとカロリーはこちら
         .macroStandard
           .carboStandard
             = f.label :carbo, "炭水化物", class: 'label'
@@ -38,9 +46,9 @@
             = f.number_field :protein, step: "0.1", class: 'standardForm', id: "proteinStandard"
 
         .calorieStandard
-          = f.label :calorie, "カロリー", class: 'label'
+          = f.label :calorie, "目標のカロリー", class: 'label'
           = f.number_field :calorie, step: "0.1", class: 'standardForm', id: "calorieStandard"
 
     .formStandard__bottom
       .formStandard__bottom--submit
-        = f.submit "完了", class: "submitBtn"
+        = f.submit "目標設定を完了する", class: "submitBtn"
