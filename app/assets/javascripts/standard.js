@@ -57,7 +57,13 @@ window.addEventListener("load", function() {
   };
 
   const calculateIdealCalorie = () => {
-    
+    const gap = idealWeight.value - weight.value
+    console.log(gap);
+    if (gap >= 0) {
+      console.log("ぷらす");
+    } else {
+      console.log("まいなす");
+    };
   };
 
   carbo.addEventListener("input", calculateCalorie);
