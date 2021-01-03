@@ -49,29 +49,32 @@ window.addEventListener("load", function() {
   };
   
   const calculateIdealCalorie = () => {
-    const sum = carbo.value*4 + fat.value*9 + protein.value*4;
-    calorie.value = sum;
-    const gap = idealWeight.value - weight.value;
-    const metabolism = document.getElementById("metabolismStandard");
-    console.log(gap);
+    const gap = parseFloat(idealWeight.value - weight.value);
+    const metabolism = parseFloat(document.getElementById("metabolismStandard").value);
     if (gap >= 0) {
-      console.log("ぷらす");
-      const totalWeightGain = metabolism.value + gap.value;
-      console.log(totalWeightGain);
-      console.log(metabolism.value);
+      const totalWeightGain = metabolism + gap*240;
+      carbo.value = Math.floor(totalWeightGain * 0.6 / 4);
+      fat.value = Math.floor(totalWeightGain * 0.2 / 9);
+      protein.value = Math.floor(totalWeightGain * 0.2 / 4);
     } else {
-      console.log("まいなす");
-      const totalWeightLose = metabolism.value + Math.abs(gap).value;
-      console.log(totalWeightLose);
-      console.log(metabolism.value);
+      const totalWeightLose = metabolism - Math.abs(gap*240);
+      carbo.value = Math.floor(totalWeightLose * 0.6 / 4);
+      fat.value = Math.floor(totalWeightLose * 0.2 / 9);
+      protein.value = Math.floor(totalWeightLose * 0.2 / 4);
     };
+
+    const calculateMacro = () => {
+      const sum = parseFloat(carbo.value*4 + fat.value*9 + protein.value*4);
+      calorie.value = sum;
+    };
+
+    carbo.addEventListener("input", calculateMacro);
+    fat.addEventListener("input", calculateMacro);
+    protein.addEventListener("input", calculateMacro);
   };
 
   male.addEventListener("click", calculateMetabolism);
   female.addEventListener("click", calculateMetabolism);
-  carbo.addEventListener("input", calculateIdealCalorie);
-  fat.addEventListener("input", calculateIdealCalorie);
-  protein.addEventListener("input", calculateIdealCalorie);
   weight.addEventListener("input", calculateIdealCalorie);
   idealWeight.addEventListener("input", calculateIdealCalorie);
 });

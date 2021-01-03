@@ -53,16 +53,16 @@
           %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
         %tr
           %td 目標
-          %td 1700
-          %td 100
-          %td 100
-          %td 100
+          %td= Standard.maximum(:calorie)
+          %td= Standard.maximum(:carbo)
+          %td= Standard.maximum(:fat)
+          %td= Standard.maximum(:protein)
         %tr
           %td 残り...
-          %td 0
-          %td 0
-          %td 0
-          %td 0
+          %td= Standard.maximum(:calorie) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+          %td= Standard.maximum(:carbo) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:carbo)
+          %td= Standard.maximum(:fat) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:fat)
+          %td= Standard.maximum(:protein) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
         %tr
           %th 
           %th カロリー(kcal)

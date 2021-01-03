@@ -15,18 +15,18 @@
       .formStandard__upper--metabolism
         .metabolismText
           %p ②標準消費カロリーを確認してください
-        = f.label :metabolism, "消費カロリー", class: 'label'
+        = f.label :metabolism, "消費カロリー(kcal)", class: 'label'
         = f.number_field :metabolism, step: "0.1", class: 'standardForm', id: "metabolismStandard"
     .formStandard__main
       .formStandard__main--left
         .weightText
           %p ③現在の体重と目指す体重を入力してください</br>（増やしてもOK）
         .weightStandard
-          = f.label :weight, "現在体重", class: 'label'
+          = f.label :weight, "今現在の体重(kg)", class: 'label'
           = f.number_field :weight, step: "0.1", class: 'standardForm', id: "weightStandard"
         
         .idealWeightStandard
-          = f.label :idealweight, "理想体重", class: 'label'
+          = f.label :idealweight, "1ヶ月後の体重(kg)", class: 'label'
           = f.number_field :idealweight, step: "0.1", class: 'standardForm', id: "idealWeightStandard"
 
       .formStandard__main--right
@@ -34,19 +34,19 @@
           %p ④目標体重に向けてのマクロとカロリーはこちら
         .macroStandard
           .carboStandard
-            = f.label :carbo, "炭水化物", class: 'label'
+            = f.label :carbo, "炭水化物(g)", class: 'label'
             = f.number_field :carbo, step: "0.1", class: 'standardForm', id: "carboStandard"
           
           .fatStandard
-            = f.label :fat, "脂質", class: 'label'
+            = f.label :fat, "脂質(g)", class: 'label'
             = f.number_field :fat, step: "0.1", class: 'standardForm', id: "fatStandard"
 
           .proteinStandard
-            = f.label :protein, "タンパク質", class: 'label'
+            = f.label :protein, "タンパク質(g)", class: 'label'
             = f.number_field :protein, step: "0.1", class: 'standardForm', id: "proteinStandard"
 
         .calorieStandard
-          = f.label :calorie, "目標のカロリー", class: 'label'
+          = f.label :calorie, "目標のカロリー(kcal)", class: 'label'
           = f.number_field :calorie, step: "0.1", class: 'standardForm', id: "calorieStandard"
 
     .formStandard__bottom
