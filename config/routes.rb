@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root  'top#index'
   resources :posts
   resources :users, only: [:edit, :update]
+  resources :standards
 end
