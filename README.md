@@ -3,7 +3,6 @@
 
 ## URL  
 [http://18.182.221.141](http://18.182.221.141)
-（※復旧作業中です。）
 
 ## 機能一覧 （予定）
 - deviseログイン機能  
@@ -30,6 +29,9 @@
 - Capistrano
 - Gem(Chartkick) 
 - Gem(Groupdate)
+- Gem(Bootstrap)
+- Gem(jquery-rails)
+- Gem(mini_racer)
 
 ## DB設計
 ### topsテーブル  
