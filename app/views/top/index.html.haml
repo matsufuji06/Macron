@@ -1,8 +1,8 @@
 Your Daily Summary
 目標カロリーまであと
 = 2000 - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-= bar_chart Standard.group(:user_id).maximum(:calorie), min: 0, max: 4000, width: "800px", height: "200px"
-= bar_chart Post.group(:date).where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie), min: 0, max: 4000,width: "800px", height: "200px", xtitle: "カロリー(kcal)", stacked: true
+= bar_chart Standard.group(:user_id).maximum(:calorie), min: 0, max: 4000, width: "600px", height: "100px"
+= bar_chart Post.group(:date).where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie), min: 0, max: 4000,width: "600px", height: "100px", xtitle: "カロリー(kcal)", stacked: true
 
 %div 今日の食べ物：
 - @myposts.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).each do |mypost|
@@ -10,4 +10,4 @@ Your Daily Summary
     = mypost.food
 
 %div 体重の推移
-= area_chart Post.group_by_day(:date).maximum(:weight), min: 30, max: 120, width: "800px", height: "200px"
+= area_chart Post.group_by_day(:date).maximum(:weight), min: 30, max: 120, width: "600px", height: "200px"
