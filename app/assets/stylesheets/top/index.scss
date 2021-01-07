@@ -1,14 +1,56 @@
 .topSummary{
-  margin: 50px 150px;
+  width: 800px;
+  margin: 50px auto 0px;
   &__calorie{
     background-color: #eee;
+    margin: 0px 0px 50px 0px;
+    &--title{
+      .titleTop{
+        background-color:#035184;
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .titleRemaining{
+        
+      }
+    }
+    &--graphs{
+      .graphStandard{
+        
+      }
+      .graphNow{
+        
+      }
+    }
+    &--add{
+      
+    }
   }
   &__food{
     background-color: #ddd;
+    margin: 0px 0px 50px 0px;
+    &--title{
+      background-color:#035184;
+      color: #fff;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    &--content{
+      
+    }
     
   }
   &__weight{
     background-color: #ccc;
-
+    &--title{
+      background-color:#035184;
+      color: #fff;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    &--content{
+      
+    }
   }
 }
