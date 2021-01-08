@@ -4,23 +4,27 @@
   &__calorie{
     background-color: #eee;
     margin: 0px 0px 50px 0px;
+    border-radius: 5px;
     &--title{
       .titleTop{
         background-color:#035184;
-        color: #fff;
+        color: #eee;
         border-radius: 5px;
         padding: 5px;
       }
       .titleRemaining{
-        
+        height: 50px;
+        line-height: 50px;
+        padding: 0px 0px 0px 100px;
       }
     }
     &--graphs{
       .graphStandard{
-        
+        margin: 0px 100px 50px;
       }
       .graphNow{
-        
+        margin: 0px 100px 50px;
+        padding: 0px 0px 50px 0px;
       }
     }
     &--add{
@@ -28,8 +32,9 @@
     }
   }
   &__food{
-    background-color: #ddd;
+    background-color: #eee;
     margin: 0px 0px 50px 0px;
+    border-radius: 5px;
     &--title{
       background-color:#035184;
       color: #fff;
@@ -42,7 +47,8 @@
     
   }
   &__weight{
-    background-color: #ccc;
+    background-color: #eee;
+    border-radius: 5px;
     &--title{
       background-color:#035184;
       color: #fff;
@@ -50,7 +56,8 @@
       padding: 5px;
     }
     &--content{
-      
+      margin: 50px 100px;
+      padding: 0px 0px 50px 0px;
     }
   }
 }
