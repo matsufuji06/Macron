@@ -12,13 +12,14 @@
           %th 炭水化物(g)
           %th 脂質(g)
           %th タンパク質(g) 
-        - @myposts.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).each do |mypost|
-          %tr
-            %td= mypost.food
-            %td= mypost.calorie
-            %td= mypost.carbo
-            %td= mypost.fat
-            %td= mypost.protein
+        - if @myposts.present?
+          - @myposts.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).each do |mypost|
+            %tr
+              %td= mypost.food
+              %td= mypost.calorie
+              %td= mypost.carbo
+              %td= mypost.fat
+              %td= mypost.protein
     .formGroup__main
       .formGroup__main--food
         = f.label :food, "食べたもの", class: 'label'
