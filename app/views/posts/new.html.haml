@@ -23,7 +23,7 @@
         = f.label :food, "食べたもの", class: 'label'
         = f.text_field :food, class: 'form'
       .formGroup__main--image
-        = f.label :food, "画像を投稿", class: 'label'
+        = f.label :image, "画像を投稿（任意）", class: 'label'
         = f.file_field :image, class: 'form'
       .formGroup__main--macro
         .carbo
@@ -38,6 +38,7 @@
       .formGroup__main--calorie
         = f.label :calorie, "カロリー", class: 'label'
         = f.number_field :calorie, step: "0.1", class: 'form'
+        %p.calorieNote ※カロリーは自動入力されます
       .formGroup__main--weight
         = f.label :weight, "現在体重", class: 'label'
         = f.number_field :weight, step: "0.1", class: 'form'

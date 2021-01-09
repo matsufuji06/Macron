@@ -14,16 +14,19 @@
   &__macroList{
     border-bottom: 1px dotted;
     padding: 0px 0px 10px 0px;
+    margin: 0px 100px;
     table{
+      margin: 0px auto;
       text-align: center;
       tr{
         th{
-          background-color: #d0712f;
+          background-color: #035184;
           color: #fff;
-          padding: 5px;
+          padding: 10px 20px;
         }
         td{
           background-color: #eee;
+          padding: 10px 20px;
           
         }
       }
@@ -32,52 +35,149 @@
   }
   &__main{
     padding: 10px 0px 10px 0px;
+    margin: 0px auto;
+    text-align: center;
     &--food{
-      
+      background-color: #eee;
+      border-radius: 20px 20px 0px 0px;
+      padding: 20px ;
+      .label{
+        padding: 5px 20px;
+        border-radius: 5px;
+        color: #ffffff;
+        background-color: #035184;
+        cursor: pointer;
+      } 
+      .form{
+        height: 30px;
+        padding: 10px;
+      }
     }
     &--image{
-      
+      background-color: #eee;
+      .label{
+        padding: 5px 20px;
+        border-radius: 5px;
+        color: #ffffff;
+        background-color: #035184;
+        cursor: pointer;
+      }
+      .form{
+        display: none;
+      }
     }
     &--macro{
       display: flex;
-      
+      justify-content: center;
+      background-color: #eee;
+      padding: 20px 0px;
       .carbo{
         margin: 0px 20px 0px 0px;
+        .label{
+          padding: 5px 20px;
+          border-radius: 5px;
+          color: #ffffff;
+          background-color: #035184;
+          cursor: pointer;
+        }
+        .form{
+          height: 30px;
+          padding: 10px;
+        }
       }
       .fat{
         margin: 0px 20px 0px 0px;
-        
+        .label{
+          padding: 5px 20px;
+          border-radius: 5px;
+          color: #ffffff;
+          background-color: #035184;
+          cursor: pointer;
+        }
+        .form{
+          height: 30px;
+          padding: 10px;
+        }
       }
       .protein{
         margin: 0px 20px 0px 0px;
-        
+        .label{
+          padding: 5px 20px;
+          border-radius: 5px;
+          color: #ffffff;
+          background-color: #035184;
+          cursor: pointer;
+        }
+        .form{
+          height: 30px;
+          padding: 10px;
+        }
       }
     }
     &--calorie{
-      
+      background-color: #eee;
+      padding: 20px 0px 0px 0px;
+      margin: 0px 0px 40px 0px;
+      border-radius: 0px 0px 20px 20px;
+      .label{
+        padding: 5px 20px;
+        border-radius: 5px;
+        color: #ffffff;
+        background-color: #035184;
+        cursor: pointer;
+      }
+      .form{
+        height: 30px;
+        padding: 10px;
+      }
+      p{
+        border-radius: 0px 0px 20px 20px;
+      }
     }
     &--weight{
-      
+      margin: 0px 0px 20px 0px;
+      .label{
+        padding: 5px 20px;
+        border-radius: 5px;
+        color: #ffffff;
+        background-color: #035184;
+        cursor: pointer;
+      }
+      .form{
+        height: 30px;
+        padding: 10px;
+      }
     }
   }
   &__submit{
     border-bottom: 1px dotted;
     padding: 0px 0px 10px 0px;
-    
+    margin: 0px 100px;
+    text-align: center;
+    .submitBtn{
+      padding: 5px 20px;
+      border-radius: 5px;
+      border: none;
+      margin: 0px 0px 20px 0px;
+      cursor: pointer;
+    }
   }
   &__macroTotal{
     padding: 10px 0px 0px 0px;
+    margin: 0px 100px;
     table{
+      margin: 0px auto;
       text-align: center;
       tr{
         td{
           background-color: #eee;
-
+          padding: 10px 20px;
+          
         }
         th{
-          background-color: #d0712f;
+          background-color: #035184;
           color: #fff;
-          padding: 5px;
+          padding: 10px 20px;
         }
       }
     }
