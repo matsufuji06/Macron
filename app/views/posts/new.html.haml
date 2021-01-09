@@ -46,28 +46,29 @@
     .formGroup__submit
       = f.submit "投稿する", class: "submitBtn"
     .formGroup__macroTotal
-      %table
-        %tr
-          %td 今日の合計
-          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:carbo)
-          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:fat)
-          %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
-        %tr
-          %td 目標
-          %td= Standard.maximum(:calorie)
-          %td= Standard.maximum(:carbo)
-          %td= Standard.maximum(:fat)
-          %td= Standard.maximum(:protein)
-        %tr
-          %td 残り...
-          %td= Standard.maximum(:calorie) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-          %td= Standard.maximum(:carbo) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:carbo)
-          %td= Standard.maximum(:fat) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:fat)
-          %td= Standard.maximum(:protein) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
-        %tr
-          %th 
-          %th カロリー(kcal)
-          %th 炭水化物(g)
-          %th 脂質(g)
-          %th タンパク質(g)
+      - if Post.sum(:calorie).present? && Post.sum(:carbo).present? && Post.sum(:fat).present? && Post.sum(:protein).present? && Standard.maximum(:calorie).present? && Standard.maximum(:carbo).present? && Standard.maximum(:fat).present? && Standard.maximum(:protein).present?
+        %table
+          %tr
+            %td 今日の合計
+            %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+            %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:carbo)
+            %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:fat)
+            %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
+          %tr
+            %td 目標
+            %td= Standard.maximum(:calorie)
+            %td= Standard.maximum(:carbo)
+            %td= Standard.maximum(:fat)
+            %td= Standard.maximum(:protein)
+          %tr
+            %td 残り...
+            %td= Standard.maximum(:calorie) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+            %td= Standard.maximum(:carbo) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:carbo)
+            %td= Standard.maximum(:fat) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:fat)
+            %td= Standard.maximum(:protein) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
+          %tr
+            %th 
+            %th カロリー(kcal)
+            %th 炭水化物(g)
+            %th 脂質(g)
+            %th タンパク質(g)
