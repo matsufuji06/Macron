@@ -8,8 +8,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
+  # バリデーションを記述
   validates :name, presence: true, uniqueness: true
 
+  # ゲストユーザーログインのメソッドを定義
   def self.guest
     find_or_create_by!(email: 'guest@example.com', name: "ゲストユーザーさん") do |user|
       user.password = SecureRandom.urlsafe_base64
