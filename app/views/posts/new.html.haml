@@ -1,5 +1,6 @@
 .formGroup
   = form_for @post do |f|
+    = render 'layouts/error_messages', model: f.object
     .formGroup__date
       = f.label :date, "日付", class: 'formGroup__date--label'
       = f.date_select :date, class: 'formGroup__date--form'

@@ -5,7 +5,7 @@
         Your Daily Summary
       .titleRemaining
         目標カロリーまであと
-        = Standard.maximum(:calorie) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+          = Standard.maximum(:calorie) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
     .topSummary__calorie--graphs
       .graphStandard
         = bar_chart Standard.group(:user_id).maximum(:calorie), min: 0, max: 4000, width: "600px", height: "100px"
