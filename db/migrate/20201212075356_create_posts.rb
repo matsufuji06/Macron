@@ -8,7 +8,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.decimal    :carbo,   null: false
       t.decimal    :fat,     null: false
       t.decimal    :protein, null: false
-      t.decimal    :weight,  null: false
+      t.decimal    :weight
       t.date       :date,    null: false
       t.timestamps
     end

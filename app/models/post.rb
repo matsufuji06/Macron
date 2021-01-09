@@ -12,6 +12,6 @@ class Post < ApplicationRecord
   validates :carbo, presence: true, format: {with: post_number}
   validates :fat, presence: true, format: {with: post_number}
   validates :protein, presence: true, format: {with: post_number}
-  validates :weight, presence: true, format: {with: post_number}
+  validates :weight, format: {with: post_number}
   validates :date, presence: true
 end
