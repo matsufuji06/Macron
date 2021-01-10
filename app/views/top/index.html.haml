@@ -1,13 +1,28 @@
-Your Daily Summary
-目標カロリーまであと
-= 2000 - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-= bar_chart Standard.group(:user_id).maximum(:calorie), min: 0, max: 4000, width: "800px", height: "200px"
-= bar_chart Post.group(:date).where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie), min: 0, max: 4000,width: "800px", height: "200px", xtitle: "カロリー(kcal)", stacked: true
+.topSummary
+  .topSummary__calorie
+    .topSummary__calorie--title
+      .titleTop
+        Your Daily Summary
+      .titleRemaining
+        目標カロリーまであと
+        - if Standard.maximum(:calorie).present? && Post.sum(:calorie).present?
+          = Standard.where(user: current_user).maximum(:calorie) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+    .topSummary__calorie--graphs
+      .graphStandard
+        = bar_chart Standard.where(user: current_user).group(:user_id).maximum(:calorie), min: 0, max: 4000, width: "600px", height: "100px"
+      .graphNow
+        = bar_chart Post.group(:date).where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie), min: 0, max: 4000,width: "600px", height: "100px", xtitle: "カロリー(kcal)", stacked: true
+    .topSummary__calorie--add
 
-%div 今日の食べ物：
-- @myposts.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).each do |mypost|
-  = link_to post_path(mypost) do
-    = mypost.food
-
-%div 体重の推移
-= area_chart Post.group_by_day(:date).maximum(:weight), min: 30, max: 120, width: "800px", height: "200px"
+  .topSummary__food
+    .topSummary__food--title
+      今日の食べ物
+    .topSummary__food--content
+      - @myposts.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).each do |mypost|
+        = link_to post_path(mypost) do
+          = mypost.food
+  .topSummary__weight
+    .topSummary__weight--title
+      体重の推移
+    .topSummary__weight--content
+      = area_chart Post.where(user: current_user).group_by_day(:date).maximum(:weight), min: 30, max: 120, width: "600px", height: "200px"

@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20201227104157) do
     t.decimal  "carbo",      precision: 10, null: false
     t.decimal  "fat",        precision: 10, null: false
     t.decimal  "protein",    precision: 10, null: false
-    t.decimal  "weight",     precision: 10, null: false
+    t.decimal  "weight",     precision: 10
     t.date     "date",                      null: false
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false

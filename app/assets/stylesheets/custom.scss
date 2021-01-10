@@ -1,4 +1,5 @@
 .header{
+  margin: 0px 200px;
   &__upper{
     display: flex;
     justify-content: space-between;
@@ -28,11 +29,6 @@
       }
       .logIn{
         margin-right: 20px;
-        &__linkSimple{
-          margin-left: 20px;
-          text-decoration: none;
-          color: blue;
-        }
       }
       // .userEdit{
       //   &__link{
