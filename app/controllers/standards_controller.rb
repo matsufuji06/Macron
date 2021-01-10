@@ -1,4 +1,6 @@
 class StandardsController < ApplicationController
+  before_action :authenticate_user!
+  
   def new
     @standard = Standard.new
   end

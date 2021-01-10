@@ -58,16 +58,16 @@
             %td= Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
           %tr
             %td 目標
-            %td= Standard.maximum(:calorie)
-            %td= Standard.maximum(:carbo)
-            %td= Standard.maximum(:fat)
-            %td= Standard.maximum(:protein)
+            %td= Standard.where(user: current_user).maximum(:calorie)
+            %td= Standard.where(user: current_user).maximum(:carbo)
+            %td= Standard.where(user: current_user).maximum(:fat)
+            %td= Standard.where(user: current_user).maximum(:protein)
           %tr
             %td 残り...
-            %td= Standard.maximum(:calorie) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-            %td= Standard.maximum(:carbo) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:carbo)
-            %td= Standard.maximum(:fat) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:fat)
-            %td= Standard.maximum(:protein) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
+            %td= Standard.where(user: current_user).maximum(:calorie) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+            %td= Standard.where(user: current_user).maximum(:carbo) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:carbo)
+            %td= Standard.where(user: current_user).maximum(:fat) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:fat)
+            %td= Standard.where(user: current_user).maximum(:protein) - Post.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:protein)
           %tr
             %th 
             %th カロリー(kcal)
