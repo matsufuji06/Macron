@@ -22,11 +22,12 @@
               %td= mypost.protein
     .formGroup__main
       .formGroup__main--food
-        = f.label :food, "食べたもの", class: 'label'
-        = f.text_field :food, class: 'form'
-      .formGroup__main--image
-        = f.label :image, "画像を投稿（任意）", class: 'label'
-        = f.file_field :image, class: 'form'
+        .foodName
+          = f.label :food, "食べたもの", class: 'label'
+          = f.text_field :food, class: 'form'
+        .foodImage
+          = f.label :image, "画像を投稿（任意）", class: 'label'
+          = f.file_field :image, class: 'form'
       .formGroup__main--macro
         .carbo
           = f.label :carbo, "炭水化物(g)", class: 'label'

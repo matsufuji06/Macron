@@ -38,32 +38,39 @@
     margin: 0px auto;
     text-align: center;
     &--food{
-      background-color: #eee;
-      border-radius: 20px 20px 0px 0px;
-      padding: 20px ;
-      .label{
-        padding: 5px 20px;
-        border-radius: 5px;
-        color: #ffffff;
-        background-color: #035184;
-        cursor: pointer;
-      } 
-      .form{
-        height: 30px;
-        padding: 10px;
+      display: flex;
+      .foodName{
+        background-color: #eee;
+        border-radius: 20px 0px 0px 0px;
+        padding: 20px;
+        width: 50%;
+        .label{
+          padding: 5px 20px;
+          border-radius: 5px;
+          color: #ffffff;
+          background-color: #035184;
+          cursor: pointer;
+        } 
+        .form{
+          height: 30px;
+          padding: 10px;
+        }
       }
-    }
-    &--image{
-      background-color: #eee;
-      .label{
-        padding: 5px 20px;
-        border-radius: 5px;
-        color: #ffffff;
-        background-color: #035184;
-        cursor: pointer;
-      }
-      .form{
-        display: none;
+      .foodImage{
+        background-color: #eee;
+        border-radius: 0px 20px 0px 0px;
+        padding: 20px;
+        width: 50%;
+        .label{
+          padding: 5px 20px;
+          border-radius: 5px;
+          color: #ffffff;
+          background-color: #035184;
+          cursor: pointer;
+        }
+        .form{
+          display: none;
+        }
       }
     }
     &--macro{
