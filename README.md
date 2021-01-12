@@ -21,18 +21,12 @@
 - Ruby on Rails 5.0.7.2  
 - haml  
 - scss  
-- Gem(devise)  
-- Gem(Carrierwave)  
+- Gem(devise, Carrierwave, Chartkick, Groupdate, Bootstrap, jquery-rails, mini_racer)  
 - Github  
 - AWS(EC2) 
 - Unicorn  
 - Nginx  
 - Capistrano
-- Gem(Chartkick) 
-- Gem(Groupdate)
-- Gem(Bootstrap)
-- Gem(jquery-rails)
-- Gem(mini_racer)
 
 ## DB設計
 ### topsテーブル  
