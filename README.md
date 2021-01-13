@@ -21,6 +21,7 @@
 - Ruby on Rails 5.0.7.2  
 - haml  
 - scss  
+- Rspec  
 - Gem(devise, Carrierwave, Chartkick, Groupdate, Bootstrap, jquery-rails, mini_racer)  
 - Github  
 - AWS(EC2) 
