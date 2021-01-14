@@ -35,7 +35,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-### followテーブル
+### followテーブル(予定)  
 ### postsテーブル  
 |Column|Type|Options|
 |------|----|-------|
@@ -48,9 +48,9 @@
 |protein|decimal|null: false|
 |weight|decimal|null: false|
 |date|date|null: false|
-### commentsテーブル  
-### likesテーブル
-### standardsテーブル 
+### commentsテーブル(予定)  
+### likesテーブル(予定)  
+### standardsテーブル  
 |Column|Type|Options|
 |------|----|-------|
 |user_id|reference|null: false, foreign_key: true|
