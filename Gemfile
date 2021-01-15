@@ -74,3 +74,4 @@ gem "chartkick"
 gem 'groupdate'
 gem 'bootstrap', '~> 4.5.0'
 gem 'mini_racer'
+gem 'kaminari'
