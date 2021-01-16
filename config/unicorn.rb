@@ -1,5 +1,5 @@
-# ../が増えている
-app_path = File.expand_path('../../../', __FILE__)
+# ../を2つに
+app_path = File.expand_path('../../', __FILE__)
 
 worker_processes 1
 # currentを指定
