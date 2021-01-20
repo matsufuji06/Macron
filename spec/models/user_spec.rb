@@ -24,6 +24,12 @@ describe User do
       expect(user.errors[:password]).to include("can't be blank")
     end
 
+    it "passwordが存在してもpassword_confirmationがない場合は登録できないこと" do
+      user = build(:user, password_confirmation: "")
+      user.valid?
+      expect(user.errors[:password_confirmation]).to include("doesn't match Password")
+    end
+
     it "重複したemailが存在する場合登録できないこと" do
       #はじめにユーザーを登録
       user = create(:user)
