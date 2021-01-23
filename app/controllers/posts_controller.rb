@@ -12,11 +12,16 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save
-      redirect_to :root
-    else
-      render action: :new
+    respond_to do |format|
+      format.html { redirect_to action: 'new' }
+      format.json {render json: @post }
     end
+
+    # if @post.save
+    #   redirect_to :root
+    # else
+    #   render action: :new
+    # end
   end
 
   def show
