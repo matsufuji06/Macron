@@ -15,11 +15,11 @@
         - if @myposts.present?
           - @myposts.where(date: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).each do |mypost|
             %tr
-              %td= mypost.food
-              %td= mypost.calorie
-              %td= mypost.carbo
-              %td= mypost.fat
-              %td= mypost.protein
+              %td.foodResult= mypost.food
+              %td.calorieResult= mypost.calorie
+              %td.carboResult= mypost.carbo
+              %td.fatResult= mypost.fat
+              %td.proteinResult= mypost.protein
     .formGroup__main
       .formGroup__main--food
         .foodName
