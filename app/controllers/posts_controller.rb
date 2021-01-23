@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     respond_to do |format|
       format.html { redirect_to action: 'new' }
-      format.jason {render json: @post }
+      format.json {render json: @post }
     end
 
     # if @post.save
