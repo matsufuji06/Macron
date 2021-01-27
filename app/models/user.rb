@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # リレーションを定義
   has_many :posts
+  has_many :comments
   has_one :standard
   
   # Include default devise modules. Others available are:
