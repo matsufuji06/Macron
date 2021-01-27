@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   # リレーションを定義
   belongs_to :user
+  has_many :comments
 
   # ImageUploaderをマウント
   mount_uploader :image, ImageUploader
