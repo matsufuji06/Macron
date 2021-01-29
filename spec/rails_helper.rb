@@ -31,7 +31,12 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  #FactroyBotの導入
   config.include FactoryBot::Syntax::Methods
+  
+  #Devise::Test::ControllerHelpersを導入
+  config.include Devise::Test::ControllerHelpers
+  
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
