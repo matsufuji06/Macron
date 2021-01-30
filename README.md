@@ -60,5 +60,3 @@
 |protein|decimal|null: false|
 |weight|decimal|null: false|
 |idealweight|decimal|null: false|
-
-## アプリへの想い
